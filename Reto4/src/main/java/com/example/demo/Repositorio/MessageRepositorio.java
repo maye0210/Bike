@@ -21,11 +21,11 @@ public class MessageRepositorio {
     @Autowired
     private MessageInterface messageCrudRepository;
     
-       public List<Message> getAll(){
+    public List<Message> getAll(){
         return (List<Message>) messageCrudRepository.findAll();
     }
        
-     public Optional<Message> getMessage(int id){
+    public Optional<Message> getMessage(int id){
         return messageCrudRepository.findById(id);
     }
 

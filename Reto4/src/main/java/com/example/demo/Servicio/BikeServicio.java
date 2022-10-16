@@ -30,10 +30,10 @@ public class BikeServicio {
     }
 
     public Bike save(Bike bike){
-        if(bike.getIdBike()==null){
+        if(bike.getId()==null){
             return bikeRepository.save(bike);
         }else{
-            Optional<Bike> e=bikeRepository.getBike(bike.getIdBike());
+            Optional<Bike> e=bikeRepository.getBike(bike.getId());
             if(e.isPresent()){
                 return bikeRepository.save(bike);
             }else{
@@ -43,8 +43,8 @@ public class BikeServicio {
     } 
     
       public Bike update(Bike bike){
-        if(bike.getIdBike()!=null){
-            Optional<Bike> e=bikeRepository.getBike(bike.getIdBike());
+        if(bike.getId()!=null){
+            Optional<Bike> e=bikeRepository.getBike(bike.getId());
             if(!e.isPresent()){
                 if(bike.getName()!=null){
                     e.get().setName(bike.getName());

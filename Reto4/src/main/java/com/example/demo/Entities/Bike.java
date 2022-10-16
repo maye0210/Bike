@@ -16,7 +16,7 @@ import java.util.List;
 public class Bike  {
      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idBike;
+    private Integer id;
     private String name;
     private String brand;
     private Integer year;
@@ -36,12 +36,12 @@ public class Bike  {
     @JsonIgnoreProperties({"bike","messages"})
     public List<Reservation> reservations;
 
-    public Integer getIdBike() {
-        return idBike;
+    public Integer getId() {
+        return id;
     }
 
-    public void setIdBike(Integer idBike) {
-        this.idBike = idBike;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

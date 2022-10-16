@@ -24,11 +24,11 @@ public class ReservationRepositorio {
     @Autowired
     private ReservationInterface reservationCrudRepository;
     
-       public List<Reservation> getAll(){
+    public List<Reservation> getAll(){
         return (List<Reservation>) reservationCrudRepository.findAll();
     }
        
-     public Optional<Reservation> getReservation(int id){
+    public Optional<Reservation> getReservation(int id){
         return reservationCrudRepository.findById(id);
     }
 

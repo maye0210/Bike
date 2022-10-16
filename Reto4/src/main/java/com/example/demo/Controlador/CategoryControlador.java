@@ -33,7 +33,7 @@ public class CategoryControlador {
       @Autowired
     private CategoryServicio categoryService;
     @GetMapping("/all")
-    public List<Category> getCategorys(){
+    public List<Category> getCategory(){
         return categoryService.getAll();
     }
 
